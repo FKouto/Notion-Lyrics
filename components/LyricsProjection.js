@@ -75,7 +75,7 @@ export default function LyricsProjection({ lyrics, song, onClose }) {
             overflow="hidden"
         >
             {/* Background Gradient */}
-            <Box position="absolute" top={0} left={0} w="100%" h="100%" zIndex={-1}>
+            {/* <Box position="absolute" top={0} left={0} w="100%" h="100%" zIndex={-1}>
                 <ShaderGradientCanvas
                     importedFiber={{ ...fiber, ...drei, ...reactSpring }}
                     style={{
@@ -128,7 +128,7 @@ export default function LyricsProjection({ lyrics, song, onClose }) {
                         wireframe={false}
                     />
                 </ShaderGradientCanvas>
-            </Box>
+            </Box> */}
 
             {/* Controls Overlay */}
             <Box position="fixed" top="4" right="4" zIndex="10000" opacity="0.3" _hover={{ opacity: 1 }} transition="opacity 0.2s">

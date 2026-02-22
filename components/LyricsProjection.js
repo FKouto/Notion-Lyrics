@@ -1,20 +1,10 @@
 import { useEffect, useState, useRef } from 'react';
 import { Box, Text, VStack, IconButton, useToast } from '@chakra-ui/react';
-import { FaTimes, FaExpand } from 'react-icons/fa';
-import dynamic from 'next/dynamic';
-import * as reactSpring from '@react-spring/three';
-import * as drei from '@react-three/drei';
-import * as fiber from '@react-three/fiber';
-
-const ShaderGradientCanvas = dynamic(
-    () => import('shadergradient').then((mod) => mod.ShaderGradientCanvas),
-    { ssr: false }
-);
-
-const ShaderGradient = dynamic(
-    () => import('shadergradient').then((mod) => mod.ShaderGradient),
-    { ssr: false }
-);
+import { FaTimes, FaExpand } from 'react-icons/fa'; // Switch to react-icons which is installed
+import { ShaderGradientCanvas, ShaderGradient } from 'shadergradient'
+import * as reactSpring from '@react-spring/three'
+import * as drei from '@react-three/drei'
+import * as fiber from '@react-three/fiber'
 
 export default function LyricsProjection({ lyrics, song, onClose }) {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -85,7 +75,7 @@ export default function LyricsProjection({ lyrics, song, onClose }) {
             overflow="hidden"
         >
             {/* Background Gradient */}
-            <Box position="absolute" top={0} left={0} w="100%" h="100%" zIndex={-1}>
+            {/* <Box position="absolute" top={0} left={0} w="100%" h="100%" zIndex={-1}>
                 <ShaderGradientCanvas
                     importedFiber={{ ...fiber, ...drei, ...reactSpring }}
                     style={{
@@ -136,7 +126,7 @@ export default function LyricsProjection({ lyrics, song, onClose }) {
                         wireframe={false}
                     />
                 </ShaderGradientCanvas>
-            </Box>
+            </Box> */}
 
             {/* Controls Overlay */}
             <Box position="fixed" top="4" right="4" zIndex="10000" opacity="0.3" _hover={{ opacity: 1 }} transition="opacity 0.2s">

@@ -19,7 +19,12 @@ import {
     IconButton
 } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
-import LyricsProjection from '../components/LyricsProjection';
+import dynamic from 'next/dynamic';
+
+const LyricsProjection = dynamic(() => import('../components/LyricsProjection'), {
+    ssr: false,
+});
+
 
 export default function Home() {
     const [songs, setSongs] = useState([]);

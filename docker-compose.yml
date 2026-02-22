@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - "3000:3000"
+    environment:
+      - NOTION_KEY=${NOTION_KEY}
+      - NOTION_DATABASE_ID=${NOTION_DATABASE_ID}

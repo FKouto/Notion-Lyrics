@@ -75,7 +75,7 @@ export default function LyricsProjection({ lyrics, song, onClose }) {
             overflow="hidden"
         >
             {/* Background Gradient */}
-            {/* <Box position="absolute" top={0} left={0} w="100%" h="100%" zIndex={-1}>
+            <Box position="absolute" top={0} left={0} w="100%" h="100%" zIndex={-1}>
                 <ShaderGradientCanvas
                     importedFiber={{ ...fiber, ...drei, ...reactSpring }}
                     style={{
@@ -86,49 +86,47 @@ export default function LyricsProjection({ lyrics, song, onClose }) {
                 >
                     <ShaderGradient
                         animate="on"
-                        axesHelper="on"
-                        bgColor1="#000000"
-                        bgColor2="#000000"
-                        brightness={0.5}
+                        axesHelper="off"
+                        brightness={0.8}
                         cAzimuthAngle={180}
-                        cDistance={3.9}
-                        cPolarAngle={115}
-                        cameraZoom={1}
-                        color1="#5606ff"
-                        color2="#75fef5"
-                        color3="#000000"
+                        cDistance={3.5}
+                        cPolarAngle={80}
+                        cameraZoom={9.1}
+                        color1="#606080"
+                        color2="#8d7dca"
+                        color3="#212121"
                         destination="onCanvas"
                         embedMode="off"
                         envPreset="city"
                         format="gif"
-                        fov={45}
+                        fov={40}
                         frameRate={10}
                         gizmoHelper="hide"
-                        grain="off"
+                        grain="on"
                         lightType="3d"
-                        pixelDensity={0.8}
-                        positionX={-0.5}
-                        positionY={0.1}
+                        pixelDensity={1}
+                        positionX={0}
+                        positionY={0}
                         positionZ={0}
                         range="disabled"
                         rangeEnd={40}
                         rangeStart={0}
                         reflection={0.1}
-                        rotationX={0}
+                        rotationX={50}
                         rotationY={0}
-                        rotationZ={235}
+                        rotationZ={-60}
                         shader="defaults"
                         type="waterPlane"
                         uAmplitude={0}
-                        uDensity={0.7}
-                        uFrequency={5.5}
+                        uDensity={1.1}
+                        uFrequency={0}
                         uSpeed={0.3}
-                        uStrength={3.9}
-                        uTime={0.2}
+                        uStrength={0.7}
+                        uTime={8}
                         wireframe={false}
                     />
                 </ShaderGradientCanvas>
-            </Box> */}
+            </Box>
 
             {/* Controls Overlay */}
             <Box position="fixed" top="4" right="4" zIndex="10000" opacity="0.3" _hover={{ opacity: 1 }} transition="opacity 0.2s">
